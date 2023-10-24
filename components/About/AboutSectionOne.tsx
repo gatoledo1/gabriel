@@ -49,9 +49,9 @@ const AboutSectionOne = ({title, paragraph, arraySkills, image, sizeImg}: About)
   );
 
   return (
-    <section id="about" className="pt-12 md:pt-20 lg:pt-16">
+    <section id="about" className="pt-20 md:pt-24 lg:pt-28">
       <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+        <div className="pb-16md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
@@ -61,8 +61,7 @@ const AboutSectionOne = ({title, paragraph, arraySkills, image, sizeImg}: About)
               />
 
               <div
-                className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
+                className="mb-12 max-w-[570px] lg:mb-0"
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
@@ -77,16 +76,15 @@ const AboutSectionOne = ({title, paragraph, arraySkills, image, sizeImg}: About)
                   </div>
                 </div>
               </div>
-                <a href="#" className="flex w-[16rem] py-3 mt-6 cursor-pointer items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-opacity-80">
+                {/* <a href="#" className="flex w-[16rem] mx-auto sm:mx-0 py-3 my-6 cursor-pointer items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-opacity-80">
                   Acessar link do projeto
-                </a>
+                </a> */}
             </div>
 
             <div className="w-full px-4 lg:w-1/2 relative">
               <BlurObject />
               <div
-                className={`wow fadeInUp relative mx-auto ${vertOrHoriz(sizeImg.width, sizeImg.height)}`}
-                data-wow-delay=".2s"
+                className={`relative mx-auto mt-10 lg:mt-0 ${vertOrHoriz(sizeImg.width, sizeImg.height)}`}
               >
                 {
                   Array.isArray(image) ? (

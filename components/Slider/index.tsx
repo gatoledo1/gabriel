@@ -88,7 +88,7 @@ const SliderComponent = ({images, width, height}: SliderTypes) => {
       <button id="previous" className='bg-primary' onClick={onPreviousClick}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="24" height="24"><path d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"/></svg>
       </button>
-      <div id="slider" className="slider wow fadeInUp relative mx-auto lg:mr-0" ref={sliderRef}>
+      <div id="slider" className="slider relative mx-auto lg:mr-0" ref={sliderRef}>
         {images?.map((item: string, index: React.Key) => {
           return (
             <Image
