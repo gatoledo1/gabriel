@@ -1,0 +1,113 @@
+"use client"
+
+import Image from "next/image";
+import SectionTitle from "../Common/SectionTitle";
+import SliderComponent from "../Slider";
+import { useTheme } from "next-themes";
+import { BlurObject } from "../Common/BlurObject";
+
+interface About {
+  title: string,
+  paragraph: string,
+  arraySkills: string[],
+  image: string | string[],
+  sizeImg: {
+    width: number,
+    height: number,
+  },
+}
+
+const checkIcon = (
+  <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
+    <path d="M5.8535 12.6631C5.65824 12.8584 5.34166 12.8584 5.1464 12.6631L0.678505 8.1952C0.483242 7.99994 0.483242 7.68336 0.678505 7.4881L2.32921 5.83739C2.52467 5.64193 2.84166 5.64216 3.03684 5.83791L5.14622 7.95354C5.34147 8.14936 5.65859 8.14952 5.85403 7.95388L13.3797 0.420561C13.575 0.22513 13.8917 0.225051 14.087 0.420383L15.7381 2.07143C15.9333 2.26669 15.9333 2.58327 15.7381 2.77854L5.8535 12.6631Z" />
+  </svg>
+);
+
+
+const AboutSectionOne = ({title, paragraph, arraySkills, image, sizeImg}: About) => {
+  
+  const { theme } = useTheme();
+
+  const vertOrHoriz = (width: number, height: number) => {
+    if(width > height) {
+      return "aspect-[5/3]"
+    } else {
+      return "aspect-[5/11] h-[34rem]"
+    }
+  }
+
+  const firstPartArray = arraySkills?.slice(0, (arraySkills.length + 1) / 2);
+  const secondPartArray = arraySkills?.slice((arraySkills.length + 1) / 2);
+
+  const List = ({ text }) => (
+    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
+      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+        {checkIcon}
+      </span>
+      {text}
+    </p>
+  );
+
+  return (
+    <section id="about" className="pt-12 md:pt-20 lg:pt-16">
+      <div className="container">
+        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+          <div className="-mx-4 flex flex-wrap items-center">
+            <div className="w-full px-4 lg:w-1/2">
+              <SectionTitle
+                title={title}
+                paragraph={paragraph}
+                mb="44px"
+              />
+
+              <div
+                className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
+                data-wow-delay=".15s"
+              >
+                <div className="mx-[-12px] flex flex-wrap">
+                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                    {
+                      firstPartArray.map((item, index) => <List key={index} text={item} />)
+                    }
+                  </div>
+                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                    {
+                      secondPartArray.map((item, index) => <List key={index} text={item} />)
+                    }
+                  </div>
+                </div>
+              </div>
+                <a href="#" className="flex w-[16rem] py-3 mt-6 cursor-pointer items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-opacity-80">
+                  Acessar link do projeto
+                </a>
+            </div>
+
+            <div className="w-full px-4 lg:w-1/2 relative">
+              <BlurObject />
+              <div
+                className={`wow fadeInUp relative mx-auto ${vertOrHoriz(sizeImg.width, sizeImg.height)}`}
+                data-wow-delay=".2s"
+              >
+                {
+                  Array.isArray(image) ? (
+                    <SliderComponent images={image} width={sizeImg.width} height={sizeImg.height} />
+                  ) : (
+                    <Image
+                      src={`/images/${image}`}
+                      alt="about-image"
+                      width={sizeImg.width}
+                      height={sizeImg.height}
+                      className="mx-auto max-w-full lg:mr-0 object-contain"
+                    />
+                  )
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSectionOne;
