@@ -47,7 +47,7 @@ const AboutSectionTwo = ({ moreDetails, sizeImage }: Details) => {
                 {moreDetails?.titles?.map((item, index) => {
                   return (
                     <div className="mb-9" key={index}>
-                      <h3 className="mb-4 text-xl font-bold text-black opacity-80 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                      <h3 className="mb-4 text-xl font-bold text-black opacity-90 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                         {item}
                       </h3>
                       <p className="text-base leading-relaxed dark:text-dark-mode text-body-color sm:text-lg sm:leading-relaxed">{moreDetails.texts[index]}</p>
@@ -58,7 +58,7 @@ const AboutSectionTwo = ({ moreDetails, sizeImage }: Details) => {
             </div>
           </div>
           <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100">
-            <svg width="340" height="201" viewBox="0 0 340 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="330" height="201" viewBox="0 0 330 201" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M5.88928 72.3303C33.6599 66.4798 101.397 64.9086 150.178 105.427C211.155 156.076 229.59 162.093 264.333 166.607C299.076 171.12 337.718 183.657 362.889 212.24"
                 stroke="url(#paint0_linear_25:218)"

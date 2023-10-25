@@ -38,7 +38,7 @@ const Hero = () => {
                     </div>
                   </div>
                 </div>
-                <h1 className="text-2xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                <h1 className="w-80 sm:w-[476px] md:w-full text-2xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                   Desenvolvedor Front-End Atuação com
                   <TypeAnimation
                     sequence={[" Javascript", 2500, " TypeScript", 2500, " ReactJS", 2500, " NextJS", 2500, " React Native", 2500]}
