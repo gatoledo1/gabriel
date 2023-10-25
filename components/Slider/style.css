@@ -54,8 +54,8 @@ img {
 #next {
   cursor: pointer;
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   border-radius: 16px;
   color: #fff;
   display: flex;
@@ -75,8 +75,6 @@ img {
 @media (max-width: 480px) {
   #previous,
   #next {
-    width: 30px;
-    height: 30px;
     border-radius: 10px;
     top: calc(50% - 20px);
   }

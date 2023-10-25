@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
@@ -7,14 +7,14 @@ import { useTheme } from "next-themes";
 import { BlurObject } from "../Common/BlurObject";
 
 interface About {
-  title: string,
-  paragraph: string,
-  arraySkills: string[],
-  image: string | string[],
+  title: string;
+  paragraph: string;
+  arraySkills: string[];
+  image: string | string[];
   sizeImg: {
-    width: number,
-    height: number,
-  },
+    width: number;
+    height: number;
+  };
 }
 
 const checkIcon = (
@@ -23,18 +23,16 @@ const checkIcon = (
   </svg>
 );
 
-
-const AboutSectionOne = ({title, paragraph, arraySkills, image, sizeImg}: About) => {
-  
+const AboutSectionOne = ({ title, paragraph, arraySkills, image, sizeImg }: About) => {
   const { theme } = useTheme();
 
   const vertOrHoriz = (width: number, height: number) => {
-    if(width > height) {
-      return "aspect-[5/3]"
+    if (width > height) {
+      return "aspect-[5/3]";
     } else {
-      return "aspect-[5/11] h-[34rem]"
+      return "aspect-[5/11] h-[34rem]";
     }
-  }
+  };
 
   const firstPartArray = arraySkills?.slice(0, (arraySkills.length + 1) / 2);
   const secondPartArray = arraySkills?.slice((arraySkills.length + 1) / 2);
@@ -54,51 +52,41 @@ const AboutSectionOne = ({title, paragraph, arraySkills, image, sizeImg}: About)
         <div className="pb-16md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
-              <SectionTitle
-                title={title}
-                paragraph={paragraph}
-                mb="44px"
-              />
+              <SectionTitle title={title} paragraph={paragraph} mb="44px" />
 
-              <div
-                className="mb-12 max-w-[570px] lg:mb-0"
-              >
+              <div className="mb-12 max-w-[570px] lg:mb-0">
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    {
-                      firstPartArray.map((item, index) => <List key={index} text={item} />)
-                    }
+                    {firstPartArray.map((item, index) => (
+                      <List key={index} text={item} />
+                    ))}
                   </div>
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    {
-                      secondPartArray.map((item, index) => <List key={index} text={item} />)
-                    }
+                    {secondPartArray.map((item, index) => (
+                      <List key={index} text={item} />
+                    ))}
                   </div>
                 </div>
               </div>
-                {/* <a href="#" className="flex w-[16rem] mx-auto sm:mx-0 py-3 my-6 cursor-pointer items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-opacity-80">
+              {/* <a href="#" className="flex w-[16rem] mx-auto sm:mx-0 py-3 my-6 cursor-pointer items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-opacity-80">
                   Acessar link do projeto
                 </a> */}
             </div>
 
-            <div className="w-full px-4 lg:w-1/2 relative">
+            <div className="relative w-full px-4 lg:w-1/2">
               <BlurObject />
-              <div
-                className={`relative mx-auto mt-10 lg:mt-0 ${vertOrHoriz(sizeImg.width, sizeImg.height)}`}
-              >
-                {
-                  Array.isArray(image) ? (
-                    <SliderComponent images={image} width={sizeImg.width} height={sizeImg.height} />
-                  ) : (
-                    <Image
-                      src={`/images/${image}`}
-                      alt="about-image"
-                      width={sizeImg.width}
-                      height={sizeImg.height}
-                      className="mx-auto max-w-full lg:mr-0 object-contain"
-                    />
-                  )
-                }
+              <div className={`relative mx-auto mt-10 lg:mt-0 ${vertOrHoriz(sizeImg.width, sizeImg.height)}`}>
+                {Array.isArray(image) ? (
+                  <SliderComponent images={image} width={sizeImg.width} height={sizeImg.height} />
+                ) : (
+                  <Image
+                    src={`/images/${image}`}
+                    alt="about-image"
+                    width={sizeImg.width}
+                    height={sizeImg.height}
+                    className="mx-auto max-w-full object-contain lg:mr-0"
+                  />
+                )}
               </div>
             </div>
           </div>
