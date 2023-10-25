@@ -50,7 +50,7 @@ const AboutSectionTwo = ({ moreDetails, sizeImage }: Details) => {
                       <h3 className="mb-4 text-xl font-bold text-black opacity-80 dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                         {item}
                       </h3>
-                      <p className="text-base leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">{moreDetails.texts[index]}</p>
+                      <p className="text-base leading-relaxed dark:text-dark-mode text-body-color sm:text-lg sm:leading-relaxed">{moreDetails.texts[index]}</p>
                     </div>
                   );
                 })}

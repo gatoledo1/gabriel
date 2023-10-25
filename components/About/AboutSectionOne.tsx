@@ -11,6 +11,7 @@ interface About {
   paragraph: string;
   arraySkills: string[];
   image: string | string[];
+  link: string;
   sizeImg: {
     width: number;
     height: number;
@@ -23,7 +24,7 @@ const checkIcon = (
   </svg>
 );
 
-const AboutSectionOne = ({ title, paragraph, arraySkills, image, sizeImg }: About) => {
+const AboutSectionOne = ({ title, paragraph, arraySkills, image, link, sizeImg }: About) => {
   const { theme } = useTheme();
 
   const vertOrHoriz = (width: number, height: number) => {
@@ -38,7 +39,7 @@ const AboutSectionOne = ({ title, paragraph, arraySkills, image, sizeImg }: Abou
   const secondPartArray = arraySkills?.slice((arraySkills.length + 1) / 2);
 
   const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
+    <p className="mb-5 flex items-center text-lg font-medium dark:text-dark-mode text-body-color">
       <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
         {checkIcon}
       </span>
@@ -68,9 +69,14 @@ const AboutSectionOne = ({ title, paragraph, arraySkills, image, sizeImg }: Abou
                   </div>
                 </div>
               </div>
-              {/* <a href="#" className="flex w-[16rem] mx-auto sm:mx-0 py-3 my-6 cursor-pointer items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-opacity-80">
-                  Acessar link do projeto
-                </a> */}
+              {
+                link && (
+                  <a href={link} className="flex w-[16rem] mx-auto sm:mx-0 py-3 my-6 cursor-pointer items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-opacity-80" rel="nofollow noreferrer noopener" target="_blank">
+                    Acessar link do projeto
+                  </a>
+                )
+              }
+              
             </div>
 
             <div className="relative w-full px-4 lg:w-1/2">

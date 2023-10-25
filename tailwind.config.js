@@ -20,6 +20,7 @@ module.exports = {
       primary: "#4A6CF7",
       yellow: "#FBB040",
       "body-color": "#707892",
+      "dark-mode": "#afbce7",
     },
     screens: {
       xs: "450px",

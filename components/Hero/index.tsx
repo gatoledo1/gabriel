@@ -15,7 +15,7 @@ const Hero = () => {
 
   return (
     <>
-      <section id="home" className="xl:pb-[160px]2xl:pb-[200px] relative z-10 min-h-screen overflow-hidden pt-[60px] pb-16 md:pb-[120px]">
+      <section id="home" className="xl:pb-[160px]2xl:pb-[200px] relative z-10 overflow-hidden pt-[60px] pb-16 md:pb-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
@@ -25,11 +25,14 @@ const Hero = () => {
                     <div className="container-inner">
                       <div className="circle-cover bg-primary opacity-60" />
                       <Image
-                        src={`/images/hero/profile-2.png`}
+                        src="/images/hero/profile-2.png"
                         alt="Gabriel Toledo"
-                        width={300}
-                        height={300}
+                        width={250}
+                        height={250}
                         quality={70}
+                        priority={true}
+                        placeholder="blur"
+                        blurDataURL="/images/hero/profile-2.png"
                         className="img w-full rounded-t-lg object-cover md:h-auto md:rounded-none md:rounded-l-lg"
                       />
                     </div>
@@ -52,12 +55,12 @@ const Hero = () => {
                   <div className="overflow-hidden rounded-lg shadow-xl dark:bg-primary dark:bg-opacity-10 md:flex">
                     <div className="p-8">
                       <p className="text-xl font-bold md:text-2xl">Sobre Gabriel Toledo</p>
-                      <p className="dark:text-gray my-5 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
+                      <p className="dark:text-dark-mode my-5 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
                         Para mim, um bom código, significa código que pode ser facilmente lido, entendido, mantido e dimensionado por
                         desenvolvedores de qualquer nível.
                         <br />
                       </p>
-                      <p className="dark:text-gray mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
+                      <p className="dark:text-dark-mode text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
                         Sou Desenvolvedor Web a {age(new Date(2016, 1, 1))} anos, sendo mais de {age(new Date(2020, 9, 10))} anos com
                         ReactJS. Nesse tempo aprendi que não basta ser excelente na codificação, também é necessário ser alguém que possa
                         compartilhar conhecimento com a equipe, pois crescer em conjunto é a forma mais eficiente de melhorar a capacidade

@@ -5,7 +5,8 @@ const ThemeToggler = () => {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="rounded-md bg-primary transition duration-300 hover:bg-opacity-90 hover:shadow-signUp hover:opacity-80 text-base dark:bg-dark-bg flex h-10 w-10 cursor-pointer items-center justify-center text-white fixed top-4 right-4 z-[99]"
+      className="rounded-md bg-primary transition duration-300 hover:bg-opacity-90 hover:shadow-signUp hover:opacity-80 text-base dark:bg-dark-bg flex h-10 w-10 cursor-pointer items-center justify-center text-white fixed top-4 right-4 md:top-8 md:right-8 lg:right-12 z-[99]"
+      title="Alterar tema"
     >
       <svg
         viewBox="0 0 23 23"
