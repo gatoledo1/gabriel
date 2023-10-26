@@ -61,7 +61,7 @@ const Hero = () => {
                         <br />
                       </p>
                       <p className="dark:text-dark-mode text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
-                        Sou Desenvolvedor Web a {age(new Date(2016, 1, 1))} anos, sendo mais de {age(new Date(2020, 9, 10))} anos com
+                        Sou Desenvolvedor Web há {age(new Date(2016, 1, 1))} anos, sendo mais de {age(new Date(2020, 9, 10))} anos com
                         ReactJS. Nesse tempo aprendi que não basta ser excelente na codificação, também é necessário ser alguém que possa
                         compartilhar conhecimento com a equipe, pois crescer em conjunto é a forma mais eficiente de melhorar a capacidade
                         de um projeto, tornando a entrega contínua uma realidade para qualquer equipe.
