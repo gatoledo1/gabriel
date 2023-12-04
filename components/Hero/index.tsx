@@ -39,10 +39,10 @@ const Hero = () => {
                     </div>
                   </div>
                 </div>
-                <h1 className="w-80 sm:w-[476px] md:w-full text-2xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                <h1 className="w-80 text-2xl font-bold leading-tight text-black dark:text-white sm:w-[476px] sm:text-4xl sm:leading-tight md:w-full md:text-5xl md:leading-tight">
                   Desenvolvedor Front-End Atuação com
                   <TypeAnimation
-                    sequence={[" Javascript", 2500, " TypeScript", 2500, " ReactJS", 2500, " NextJS", 2500, " React Native", 2500]}
+                    sequence={[" Javascript", 2500, " Typescript", 2500, " ReactJS", 2500, " NextJS", 2500, " React Native", 2500]}
                     className="gradient-words mb-5 text-2xl font-bold leading-tight  sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight"
                     wrapper="span"
                     speed={4}
@@ -56,14 +56,13 @@ const Hero = () => {
                   <div className="overflow-hidden rounded-lg shadow-xl dark:bg-primary dark:bg-opacity-10 md:flex">
                     <div className="p-8">
                       <p className="text-xl font-bold md:text-2xl">Sobre Gabriel Toledo</p>
-                      <p className="dark:text-dark-mode my-5 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
-                        Para mim, um bom código, significa código que pode ser facilmente lido, entendido, mantido e dimensionado por
-                        desenvolvedores de qualquer nível.
+                      <p className="my-5 text-base !leading-relaxed text-body-color dark:text-dark-mode sm:text-lg md:text-xl">
+                        Sou um profissional desenvolvedor de sites, aplicações e app, plenamente realizado na área.
                         <br />
                       </p>
-                      <p className="dark:text-dark-mode text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
-                        Sou Desenvolvedor Web há {age(new Date(2016, 1, 1))} anos, sendo mais de {age(new Date(2020, 9, 10))} anos com
-                        ReactJS. Nesse tempo aprendi que não basta ser excelente na codificação, também é necessário ser alguém que possa
+                      <p className="text-base !leading-relaxed text-body-color dark:text-dark-mode sm:text-lg md:text-xl">
+                        Desenvolvedor Web há {age(new Date(2016, 1, 1))} anos, sendo mais de {age(new Date(2020, 9, 10))} anos com ReactJS.
+                        Nesse tempo aprendi que não basta ser excelente na codificação, também é necessário ser alguém que possa
                         compartilhar conhecimento com a equipe, pois crescer em conjunto é a forma mais eficiente de melhorar a capacidade
                         de um projeto, tornando a entrega contínua uma realidade para qualquer equipe.
                       </p>

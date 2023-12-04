@@ -56,20 +56,20 @@ img {
   position: absolute;
   width: 36px;
   height: 36px;
-  border-radius: 16px;
+  border-radius: 10px;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   top: calc(50% - 25px);
-  left: -40px;
+  left: 0;
   box-shadow: 0 12px 25px -9px #093ac0;
   z-index: 1;
 }
 
 #next {
   left: unset;
-  right: -40px;
+  right: 0;
 }
 
 @media (max-width: 480px) {
@@ -85,13 +85,13 @@ img {
   #next {
     width: 40px;
     height: 40px;
-    border-radius: 18px;
+    border-radius: 10px;
     top: calc(50% - 30px);
-    left: -50px;
+    left: 0;
   }
 
   #next {
     left: unset;
-    right: -50px;
+    right: 0;
   }
 }
