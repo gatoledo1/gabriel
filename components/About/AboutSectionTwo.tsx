@@ -43,6 +43,7 @@ const AboutSectionTwo = ({ moreDetails, sizeImage, aspectRatio }: Details) => {
                     //@ts-ignore
                     src={AboutImage(moreDetails.image)}
                     loading="lazy"
+                    quality={75}
                     alt="about-image"
                     width={sizeImage.width}
                     height={sizeImage.height}
