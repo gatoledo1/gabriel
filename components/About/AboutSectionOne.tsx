@@ -40,14 +40,14 @@ const AboutSectionOne = ({ title, paragraph, arraySkills, image, link, sizeImg, 
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle title={title} paragraph={paragraph} mb="44px" />
 
-              <div className="mb-12 max-w-[570px] lg:mb-0">
+              <div className="mb-12 lg:mb-0">
                 <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                  <div className="px-3 w-full sm:w-1/2">
                     {firstPartArray.map((item, index) => (
                       <List key={index} text={item} />
                     ))}
                   </div>
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                  <div className="px-3 w-full sm:w-1/2">
                     {secondPartArray.map((item, index) => (
                       <List key={index} text={item} />
                     ))}
@@ -77,6 +77,7 @@ const AboutSectionOne = ({ title, paragraph, arraySkills, image, link, sizeImg, 
                     //@ts-ignore
                     src={AboutImage(image)}
                     loading="lazy"
+                    quality={75}
                     alt="about-image"
                     width={sizeImg.width}
                     height={sizeImg.height}

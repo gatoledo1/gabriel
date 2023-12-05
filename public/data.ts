@@ -38,7 +38,7 @@ export const dataAbout = [
       width: 248,
       height: 544,
     },
-    aspectRatio: "7/9",
+    aspectRatio: "6/9",
     moreDetails: {
       image: ["app-puc/app-do-aluno-3.jpg", "app-puc/app-do-aluno-8.jpg"],
       titles: ["Problema a se resolver", "Minha atuação", "Benefícios da implementação"],
