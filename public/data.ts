@@ -95,7 +95,7 @@ export const dataAbout = [
   {
     title: "Plataforma FinanZero",
     paragraph:
-      "Atuação com a plataforma de marketplace de empréstimos, desenvolvendo mecanismos dinâmicos, estruturas de metadados, back for front, formulários, entre outros. Ambiente contande projetos React Hooks e React Class Components, NodeJS e GoLang",
+      "Atuação com a plataforma de marketplace de empréstimos, desenvolvendo mecanismos dinâmicos, estruturas de metadados, back for front, formulários, entre outros. Ambiente contendo projetos React Hooks e React Class Components, NodeJS e GoLang",
     arraySkills: ["ReactJS", "Redux", "Stylus / SASS", "Javascript", "PWA", "Webpack", "Metadados", "API Rest"],
     image: ["./finanzero/finanzero-1.png", "./finanzero/finanzero-2.png", "./finanzero/finanzero-3.png", "./finanzero/finanzero-4.png"],
     link: "https://finanzero.com.br/me/",
@@ -132,8 +132,8 @@ export const dataMyTests = [
       image: "./the-movies-2.jpg",
       titles: ["Desafio", "Estrutura"],
       texts: [
-        "Criar uma aplicação com estilo livre usando Micro-Frontend usando React + Algum framework de sua escolha, onde a parte superior deve ser um menu e a parte inferior o corpo deve consumir uma a API de sua escolha. Você deverá desenvolver 1 interface com 2 projetos, Utilizar o module federation do webpack",
-        "O projeto header-app consiste em uma aplicação react somente com o menu, na configuração do Webpack do projeto, a aplicação é externalizada em http://localhost:3001/remoteEntry.js. No projeto kenlo-test-movies, onde contém o container da aplicação (sem o menu), é feita a captura da aplicação remota.",
+        "Criar uma aplicação com estilo livre usando Micro-Frontend usando React mais algum framework de sua escolha, onde a parte superior deve ser um menu e a parte inferior o corpo deve consumir uma a API de sua escolha. Desenvolver 1 interface com 2 projetos, utilizar o module federation do webpack",
+        "O projeto header-app consiste em uma aplicação react somente com o menu, na configuração do Webpack a aplicação é externalizada em http://localhost:3001/remoteEntry.js. No projeto kenlo-test-movies, onde contém o container da aplicação (sem o menu), é feita a captura da aplicação remota.",
       ],
     },
   },
@@ -153,7 +153,7 @@ export const dataMyTests = [
       image: ["./transfeera-3.png", "./transfeera-4.png"],
       titles: ["Desafio", "Estrutura"],
       texts: [
-        "Simular um back-end para a aplicação. O sistema deveria incluir funcionalidades de listagem com filtros, inclusão, edição e remoção de Favorecidos de pagamento",
+        "Simular um back-end para a aplicação. O sistema devia incluir funcionalidades de listagem com filtros, inclusão, edição e remoção de Favorecidos de pagamento",
         "Utilização de metadados para construção dos fields e inputs. Os componentes foram criados em nível de micro-componentes para que as variações pudessem ser aplicadas, sem impedir a reutilização de cada componente.",
       ],
     },
