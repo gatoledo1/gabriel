@@ -36,7 +36,7 @@ const AboutSectionOne = ({ title, paragraph, arraySkills, image, link, sizeImg, 
     <section id="about" className="pt-12 md:pt-24 lg:pt-28">
       <div className="container">
         <div className="pb-12">
-          <div className="-mx-4 flex flex-wrap items-center">
+          <div className="-mx-4 flex flex-wrap items-center gap-y-8">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle title={title} paragraph={paragraph} mb="44px" />
 
@@ -68,7 +68,7 @@ const AboutSectionOne = ({ title, paragraph, arraySkills, image, link, sizeImg, 
 
             <div className="relative w-full px-4 lg:w-1/2">
               <Svgs type="blurObj" />
-              <div className="relative mx-auto mt-10 max-h-[27rem] lg:mt-0" style={{ aspectRatio: aspectRatio }}>
+              <div className="relative mx-auto mt-10 max-h-[33rem] lg:mt-0" style={{ aspectRatio: aspectRatio }}>
                 {Array.isArray(image) ? (
                   //@ts-ignore
                   <SliderComponent images={AboutImage(image)} width={sizeImg.width} height={sizeImg.height} />

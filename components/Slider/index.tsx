@@ -66,7 +66,7 @@ const SliderComponent = ({ images, width, height }: SliderTypes) => {
   };
 
   return (
-    <div className="px-4 m-auto">
+    <div className="px-4 m-auto h-full">
       <button id="previous" className="bg-primary" onClick={onPreviousClick}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="24" height="24">
           <path d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z" />
